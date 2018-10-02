@@ -1,0 +1,25 @@
+<mat-grid-list cols="2" rowHeight="100px">
+  <mat-grid-tile
+      *ngFor="let tile of tiles"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      >
+    
+      <div *ngIf="tile == tiles[0]"><img src="http://openweathermap.org/img/w/{{ weather$.weather[0].icon }}.png" height="120px" width="120px">
+        <h2 style="text-align: center;">{{ weather$.name }}</h2>
+      </div>
+      
+      <div *ngIf="tile == tiles[1]">
+        <h3>Coordinates</h3>
+        <p>
+          <b>Longitude: </b>{{ weather$.coord.lon }}<br>
+          <b>Latitude: </b>{{ weather$.coord.lat }}
+        </p>
+        <h3>Weather</h3>
+        <p>
+          {{ weather$.main.temp }} ℃
+          {{ weather$.weather[0].main }}
+        </p>
+      </div>
+    </mat-grid-tile>
+</mat-grid-list>

@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+//Toolbar
+.icon {
+    padding: 0 14px;
+    cursor: pointer;
+  }
+  
+  .icon-spacer {
+    flex: 1 1 auto;
+  }
+
+  //Card
+  .card {
+    flex: 1;
+  }
+  
